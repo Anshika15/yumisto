@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+ <head>
+
+  <title>feedback</title>
+  
+  
+  <style>
+
+    body{background-image:url("images/feedback.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0%;
+}
+
+  </style>
+  <script>
+	function abc()
+	{
+	  window.alert("Thanks for giving us your valuable time to let us know about what you think about our services! We appreciate the opportunity to grow and flourish from your comments or suggestions..We will respect your suggestions!")
+	}
+  </script>
+
+   </head>
+
+    <body>
+
+     <form onsubmit="abc()" method="post">
+      
+       <fieldset>
+
+	<legend><b>Feedback Form</b></legend>
+	   <center>
+		<b >First Name:</b>  <input type="text" placeholder="First name" required >
+            <br><br>
+
+		<b >Last Name:</b>  <input type="text" placeholder="Last name"  >
+	    <br><br>
+
+		<b>Mobile number:</b>  <input type="number">
+	    <br><br>
+
+		<b>e-mail:</b>  <input type="email" placeholder="valid e-mail">
+	    <br><br>
+
+	       <b> Select City:</b>  <select value="valid name" > 
+ 			<option> Chandigarh </option>
+			<option> Rajpura </option>
+			<option> Himachal pradesh </option>
+			<option> Punjab </option>
+			<option> Zirakpur </option>
+			<option> Panchkula </option>
+		</select>
+	     <br><br>
+
+	<b >Food Quality</b> <br>
+	    <input type="radio" name="quality"><b>excellent
+           <input type="radio" name="quality"><b>good 
+	   <input type="radio" name="quality"><b>average 
+           <input type="radio" name="quality"><b>needs improvement
+            <br><br>
+
+	<b>Comments:</b>
+	    <br><br>
+
+		<textarea rows="6" required></textarea> 
+            <br><br>
+
+            <input type="submit" value="submit">
+
+   </fieldset>
+
+   </form>
+
+  </body>
+
+</html>

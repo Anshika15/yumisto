@@ -1,0 +1,125 @@
+<!Doctype html>
+<html>
+<head>
+<title>order</title>
+<script>
+function abc()
+{
+  var a=document.getElementById("1").value;
+  var b=/[@|#|$|%|&]/;
+  if(a.match(b))
+  window.alert("not a valid loaction");
+  else
+  window.alert("we deliver to this lacation"); 
+}
+
+function def()
+{
+  var c=document.getElementById("2").value;
+  var d=document.getElementById("3").value;
+  var e=/[a-z]/;
+  var f=/[0-9]/;
+  if(c.match(e) && d.match(f))
+  window.alert("your order is placed");
+  else
+  window.alert("not a valid order");
+}
+var arr=[];
+function add()
+{
+var elem=document.getElementById("2").value;
+arr.push(elem);
+}
+function dis()
+{
+ var aa="";
+ var i;
+ for(i=0;i<arr.length;i++)
+ {aa+=document.getElementById("4").innerHTML=arr[i]+"<br>";
+  document.getElementById("4").innerHTML=aa;}
+}
+function anshika()
+{
+window.open("pay.html") ;
+}
+</script>
+<style>
+.topnav {
+  overflow: hidden;
+  background-color: lightblue;
+  font-size:30px;
+  text-align:center;
+}
+
+.topnav a {
+  float: center;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: green;
+  
+}
+
+.topnav a.active {
+  background-color: green;
+}
+</style>
+</head>
+<body>
+<div class="topnav">
+   
+  <a href="menunukkar.html">MENU</a>
+  <a class="active" href="ordernukkar.html">ORDER</a>
+</div>
+
+<center><h1>NUKKAR DHABA</h1></center>
+<p style="font-family:Edwardian Script ITC;font-size:30px;color:blue">From our Nukkar Dhaba you can order your favourite food according to your requirement!!</p>
+<div style="float:left;width:50%">
+<img src="images/nukkar.jfif">
+</div>
+<div style="float:right;width:50%">
+<fieldset>
+<legend>Delivery Location</legend>
+<table>
+<tr>
+<td>Please enter your delivery location here:</td>
+</tr>
+<tr>
+<td><input type="text" id="1"></td>
+</tr>
+<tr>
+<td><input type="submit" value="Detect Location" style="background-color:green" onclick="abc()"></td>
+</tr> 
+</table>
+</fieldset>
+<p style="color:green">Get <b>50% OFF</b> (upto $3) on your first order...
+<br>this means you can taste our food</p>
+</div>
+<div style="float:center">
+<h3>Order now!!</h3>
+<table>
+<tr>
+<td>Enter the food you want order from our menu:</td>
+<td><input type="text" id="2"></td>
+</tr>
+<tr>
+<td>no. of plates you want to order:</td>
+<td><input type="text" id="3"></td>
+</tr>
+</table>
+<center><input type="submit" value="submit" style="background-color:green" onclick="def()"><br>
+<input type="submit" value="add to my order" style="background-color:green" onclick="add()">
+<input type="submit" value="display my order" style="background-color:green" onclick="dis()">
+<br>
+<input type="submit" value="payment" style="background-color:lightblue" onclick="anshika()">
+</div>
+<p id="4" style="border:20px solid">
+</p>
+
+</body>
+</html>

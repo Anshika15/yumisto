@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<title>new password </title>
+<script>
+function abc()
+{
+  var a = document.getElementById("a").value ;
+  var b = document.getElementById("b").value ;
+
+  if(a==b)
+	{
+	   if (a.length < 6 || b.length < 6)
+        {
+	  window.alert("enter a strong password of atleast 6 ") ;
+	}
+	   else
+	{
+	  window.alert("your password is updated!") ;
+	}
+	}
+  else 
+	{
+	  window.alert("retype password");
+	}
+ 
+}
+</script>
+<style>
+	body {
+	       background : linear-gradient(#f7f8f8,#acbb78) ;
+	       background-attachment:fixed ;
+		}
+</style>
+<head>
+<body>
+<br><br><br><br><br><br>
+<center>
+<b>please enter a strong password with atleast 6 characters</b>
+<br><br>
+<b>Enter new password:</b>
+<input type="password" placeholder="strong password" id="a">
+<br><br>
+<b>renter your password:</b>
+<input type="password" id="b">
+<br><br>
+<input type="button" value="enter" onclick="abc()">
+</body>
+</html>

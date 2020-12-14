@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign in</title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+}
+
+
+</style>
+<script>
+	function cancel()
+		{
+		a = window.confirm("Are you sure want to cancel it? ")
+		  if (a == true)
+		  window.open("home.html") ;
+			}
+	function abc()
+		{
+		var b = document.getElementById("user").value ;
+		var c = document.getElementById("pass").value ;
+		if (c.length > 6 && b.length > 2) 
+		  window.open("firstpage.html") ;
+			}
+</script>
+</head>
+<body>
+
+  
+  <form  >
+    <fieldset>
+   <center><img src="images/avatar.jpg" alt="Avatar" id="av"></center>
+    
+
+    <div class="container">
+      <b id="q">Username</b>
+      <input type="text" placeholder="Enter Username" name="uname" id="user" required>
+       
+      <b>Password</b>
+      <input type="password" placeholder="Enter Password" name="psw" id="pass" required>
+        
+      <b>Gender: </b>
+      <br><br>
+      
+      <input type="radio" name="gender" onclick="document.getElementById('av').src='images/avatarb.jpg'">  Male
+      <input type="radio" name="gender" onclick="document.getElementById('av').src='images/avatarg.jpg'">  Female
+      <input type="radio" name="gender" onclick="document.getElementById('av').src='images/avatar.jpg'">  Others
+
+      <button type="submit" onclick="abc()">Login</button>
+      <br>
+   </fieldset>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="reset" class="cancelbtn" onclick="cancel()"> Cancel </button>
+      <span class="psw">Forgot <a href="password.html">password?</a></span>
+    </div>
+
+  
+  </form>
+</div>
+
+
+
+
+</body>
+</html>
